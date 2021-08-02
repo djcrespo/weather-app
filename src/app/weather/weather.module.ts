@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -15,6 +16,9 @@ import { WeatherPage } from './weather.page';
     IonicModule,
     WeatherPageRoutingModule
   ],
-  declarations: [WeatherPage]
+  declarations: [WeatherPage],
+  providers: [
+    Geolocation
+  ]
 })
 export class WeatherPageModule {}
